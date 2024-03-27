@@ -6,7 +6,6 @@ jobs:
     steps:
       - name: Installing Apache Web Server
         run: |
-          sudo su
           apt update 
           apt install apache2
           ls /var/www/html
@@ -17,4 +16,4 @@ jobs:
           echo "Hello World from $(hostname)"
           echo "Hello World from $(hostname) $(hostname -i)"
           echo "Hello world from $(hostname) $(hostname -i)" > /var/www/html/index.html
-          sudo service apache2 start
+          service apache2 start
